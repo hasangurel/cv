@@ -11,9 +11,8 @@ export const Navigation = () => {
 
   const navLinks = [
     { href: "#about", label: t('nav.about') },
-    { href: "#skills", label: t('nav.skills') },
-    { href: "#experience", label: t('nav.experience') },
-    { href: "#education", label: t('nav.education') },
+    { href: "#whatido", label: t('nav.expertise') },
+    { href: "#education", label: t('nav.timeline') },
     { href: "#projects", label: t('nav.projects') },
     { href: "#instagram", label: t('nav.instagram') },
     { href: "#knowme", label: t('nav.knowme') },

@@ -14,9 +14,9 @@ const translations: Record<Language, Record<string, string>> = {
     en: {
         // Navigation
         'nav.about': 'About',
+        'nav.expertise': 'Expertise',
+        'nav.timeline': 'Timeline',
         'nav.knowme': 'Get to Know Me',
-        'nav.skills': 'Skills',
-        'nav.experience': 'Experience',
         'nav.education': 'Education',
         'nav.projects': 'Projects',
         'nav.instagram': 'Instagram',
@@ -67,13 +67,60 @@ const translations: Record<Language, Record<string, string>> = {
         'knowme.future.title': 'Present and Future',
         'knowme.future.text': 'Currently actively seeking new opportunities, Hasan is open to remote work and ready to participate in international projects. He aims to further develop himself in backend development and be part of large-scale projects.\n\nHe also continues his content creation journey at full speed. With the goals he set for 2026, he invests in both professional and personal development.\n\nHasan is someone who loves technology, is open to learning, enjoys sharing, and constantly improves himself. Not just a developer who writes code, but a professional who aims to be an active part of the technology ecosystem.',
 
+        // What I Do Section
+        'whatido.title': 'What I Do',
+        'whatido.subtitle': 'Areas where I can add value to your projects with my backend development expertise',
+
+        'expertise.backend.title': 'Backend Architecture',
+        'expertise.backend.description': 'Designing scalable, maintainable backend systems using microservices architecture and modern design patterns.',
+
+        'expertise.database.title': 'Database Design',
+        'expertise.database.description': 'Expert in relational (PostgreSQL, MySQL) and NoSQL (MongoDB) databases, data modeling, and optimization.',
+
+        'expertise.api.title': 'API Development',
+        'expertise.api.description': 'Building robust RESTful APIs with comprehensive documentation, versioning, and best practices.',
+
+        'expertise.microservices.title': 'Microservices',
+        'expertise.microservices.description': 'Developing distributed systems with Spring Boot, service discovery, and inter-service communication.',
+
+        'expertise.security.title': 'Security & Auth',
+        'expertise.security.description': 'Implementing secure authentication and authorization with JWT, OAuth2, LDAP, and Spring Security.',
+
+        'expertise.devops.title': 'DevOps & CI/CD',
+        'expertise.devops.description': 'Containerization with Docker, deployment automation, and continuous integration pipelines.',
+
+        // How I Work Section
+        'howiwork.title': 'How I Work',
+        'howiwork.subtitle': 'My systematic approach to building high-quality backend solutions',
+
+        'howiwork.analyze.title': 'Analyze & Plan',
+        'howiwork.analyze.description': 'Understanding requirements, identifying challenges, and creating a solid technical architecture plan.',
+
+        'howiwork.develop.title': 'Clean Development',
+        'howiwork.develop.description': 'Writing clean, maintainable code following SOLID principles and design patterns.',
+
+        'howiwork.test.title': 'Test & Validate',
+        'howiwork.test.description': 'Comprehensive testing with unit tests, integration tests, and ensuring code quality.',
+
+        'howiwork.deploy.title': 'Deploy & Monitor',
+        'howiwork.deploy.description': 'Smooth deployments with CI/CD pipelines and continuous monitoring of system health.',
+
+        'howiwork.optimize.title': 'Optimize & Scale',
+        'howiwork.optimize.description': 'Performance optimization, code refactoring, and ensuring scalability for growth.',
+
+        'howiwork.collaborate.title': 'Collaborate & Grow',
+        'howiwork.collaborate.description': 'Active communication with team members, code reviews, and continuous learning.',
+
+        'howiwork.philosophy.title': 'My Development Philosophy',
+        'howiwork.philosophy.description': 'I believe in writing code that not only works but is also clean, tested, and maintainable. Every line of code is an investment in the future. I prioritize quality over speed, but never compromise on delivery. Continuous learning and improvement are at the core of my development process.',
+
     },
     tr: {
         // Navigation
         'nav.about': 'Hakkımda',
+        'nav.expertise': 'Uzmanlık',
+        'nav.timeline': 'Zaman Çizelgesi',
         'nav.knowme': 'Hasan Kimdir?',
-        'nav.skills': 'Yetenekler',
-        'nav.experience': 'Deneyim',
         'nav.education': 'Eğitim',
         'nav.projects': 'Projeler',
         'nav.instagram': 'Instagram',
@@ -123,6 +170,53 @@ const translations: Record<Language, Record<string, string>> = {
 
         'knowme.future.title': 'Şimdi ve Gelecek',
         'knowme.future.text': 'Şu an aktif olarak yeni fırsatlar arayan Hasan, remote çalışmaya açık ve uluslararası projelerde yer almaya hazır. Backend development alanında kendini daha da geliştirmeyi, büyük ölçekli projelerde yer almayı hedefliyor.\n\nAynı zamanda içerik üretimi yolculuğuna da hız kesmeden devam ediyor. 2026 yılı için belirlediği hedeflerle hem profesyonel hem kişisel gelişimine yatırım yapıyor.\n\nHasan, teknolojiyi seven, öğrenmeye açık, paylaşmayı seven ve sürekli kendini geliştiren biri. Kod yazan bir geliştirici değil, teknoloji ekosisteminin aktif bir parçası olmayı hedefleyen bir profesyonel.',
+
+        // What I Do Section
+        'whatido.title': 'Neler Yapıyorum',
+        'whatido.subtitle': 'Backend geliştirme uzmanlığımla projelerinize değer katabileceğim alanlar',
+
+        'expertise.backend.title': 'Backend Mimarisi',
+        'expertise.backend.description': 'Mikroservis mimarisi ve modern tasarım kalıpları kullanarak ölçeklenebilir, sürdürülebilir backend sistemleri tasarlıyorum.',
+
+        'expertise.database.title': 'Veritabanı Tasarımı',
+        'expertise.database.description': 'İlişkisel (PostgreSQL, MySQL) ve NoSQL (MongoDB) veritabanlarında uzmanım. Veri modelleme ve optimizasyon konularında deneyimliyim.',
+
+        'expertise.api.title': 'API Geliştirme',
+        'expertise.api.description': 'Kapsamlı dokümantasyon, versiyonlama ve en iyi uygulamalarla güçlü RESTful API\'ler geliştiriyorum.',
+
+        'expertise.microservices.title': 'Mikroservisler',
+        'expertise.microservices.description': 'Spring Boot ile dağıtık sistemler, servis keşfi ve servisler arası iletişim geliştiriyorum.',
+
+        'expertise.security.title': 'Güvenlik & Yetkilendirme',
+        'expertise.security.description': 'JWT, OAuth2, LDAP ve Spring Security ile güvenli kimlik doğrulama ve yetkilendirme sistemleri uyguluyorum.',
+
+        'expertise.devops.title': 'DevOps & CI/CD',
+        'expertise.devops.description': 'Docker ile konteynerizasyon, otomatik deployment ve sürekli entegrasyon pipeline\'ları kuruyorum.',
+
+        // How I Work Section
+        'howiwork.title': 'Nasıl Çalışıyorum',
+        'howiwork.subtitle': 'Yüksek kaliteli backend çözümleri geliştirmek için sistematik yaklaşımım',
+
+        'howiwork.analyze.title': 'Analiz & Planlama',
+        'howiwork.analyze.description': 'Gereksinimleri anlama, zorlukları belirleme ve sağlam bir teknik mimari planı oluşturma.',
+
+        'howiwork.develop.title': 'Temiz Geliştirme',
+        'howiwork.develop.description': 'SOLID prensipleri ve tasarım kalıplarını takip ederek temiz, sürdürülebilir kod yazma.',
+
+        'howiwork.test.title': 'Test & Doğrulama',
+        'howiwork.test.description': 'Unit testler, entegrasyon testleri ile kapsamlı test yapma ve kod kalitesini sağlama.',
+
+        'howiwork.deploy.title': 'Deploy & İzleme',
+        'howiwork.deploy.description': 'CI/CD pipeline\'ları ile sorunsuz deployment\'lar ve sistem sağlığını sürekli izleme.',
+
+        'howiwork.optimize.title': 'Optimize & Ölçeklendirme',
+        'howiwork.optimize.description': 'Performans optimizasyonu, kod refactoring ve büyüme için ölçeklenebilirliği sağlama.',
+
+        'howiwork.collaborate.title': 'İşbirliği & Gelişim',
+        'howiwork.collaborate.description': 'Ekip üyeleriyle aktif iletişim, kod inceleme ve sürekli öğrenme.',
+
+        'howiwork.philosophy.title': 'Geliştirme Felsefem',
+        'howiwork.philosophy.description': 'Sadece çalışan değil, aynı zamanda temiz, test edilmiş ve sürdürülebilir kod yazmaya inanıyorum. Her kod satırı geleceğe bir yatırımdır. Kaliteyi hıza tercih ederim ama teslimat konusunda asla ödün vermem. Sürekli öğrenme ve gelişim, geliştirme sürecimin temelindedir.',
     },
 };
 

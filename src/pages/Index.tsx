@@ -1,10 +1,9 @@
 import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
+import { ExpertiseSection } from "@/components/ExpertiseSection";
+import { TimelineSection } from "@/components/TimelineSection";
 import { GetToKnowMe } from "@/components/GetToKnowMe";
-import { Skills } from "@/components/Skills";
-import { Experience } from "@/components/Experience";
-import { Education } from "@/components/Education";
 import { Projects } from "@/components/Projects";
 import { InstagramSection } from "@/components/InstagramSection";
 import { Contact } from "@/components/Contact";
@@ -17,9 +16,8 @@ const Index = () => {
       <main>
         <Hero />
         <About />
-        <Skills />
-        <Experience />
-        <Education />
+        <ExpertiseSection />
+        <TimelineSection />
         <Projects />
         <InstagramSection />
         <GetToKnowMe />
