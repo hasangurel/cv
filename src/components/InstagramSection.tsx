@@ -111,13 +111,13 @@ export const InstagramSection = () => {
                     </div>
 
                     <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600 bg-clip-text text-transparent">
-                        Social Media
+                        {t('instagram.title')}
                     </h2>
 
                     <div className="w-24 h-1.5 bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600 mx-auto rounded-full mb-6" />
 
                     <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                        Follow me on social media for tech content, tutorials, and programming tips
+                        {t('instagram.subtitle')}
                     </p>
                 </motion.div>
 

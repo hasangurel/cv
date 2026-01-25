@@ -2,54 +2,52 @@ import { ExternalLink, Github, Server, Database, Shield, Layers } from "lucide-r
 import { Card, CardContent, CardFooter, CardHeader } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
-
-const projects = [
-  {
-    title: "E-Commerce Microservices Platform",
-    description:
-      "A scalable e-commerce backend built with microservices architecture. Features include user authentication, product catalog, order management, and payment processing.",
-    technologies: ["Spring Boot", "PostgreSQL", "Docker", "REST API", "JWT"],
-    icon: Server,
-    github: "https://github.com/hasangurel",
-  },
-  {
-    title: "Enterprise HRMS System",
-    description:
-      "Human Resource Management System with JWT, LDAP, and OAuth2 authentication. Integrated MongoDB and ElasticSearch for efficient data management.",
-    technologies: ["Spring Boot", "MongoDB", "ElasticSearch", "OAuth2", "LDAP"],
-    icon: Shield,
-    github: "https://github.com/hasangurel",
-  },
-  {
-    title: "Library Management System",
-    description:
-      "Full-featured library management system developed using Agile methodology. Led a 5-person team managing sprint processes and development cycles.",
-    technologies: ["Java", "Spring MVC", "MySQL", "Agile", "Scrum"],
-    icon: Database,
-    github: "https://github.com/hasangurel",
-  },
-  {
-    title: "Campaign Management API",
-    description:
-      "RESTful API for managing marketing campaigns with user authorization and product management features. Built following SOLID principles and design patterns.",
-    technologies: ["Spring Boot", "JUnit", "Mockito", "Docker", "CI/CD"],
-    icon: Layers,
-    github: "https://github.com/hasangurel",
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const Projects = () => {
+  const { t } = useLanguage();
+
+  const projects = [
+    {
+      title: t('proj.ecommerce.title'),
+      description: t('proj.ecommerce.desc'),
+      technologies: ["Spring Boot", "PostgreSQL", "Docker", "REST API", "JWT"],
+      icon: Server,
+      github: "https://github.com/hasangurel",
+    },
+    {
+      title: t('proj.hrms.title'),
+      description: t('proj.hrms.desc'),
+      technologies: ["Spring Boot", "MongoDB", "ElasticSearch", "OAuth2", "LDAP"],
+      icon: Shield,
+      github: "https://github.com/hasangurel",
+    },
+    {
+      title: t('proj.library.title'),
+      description: t('proj.library.desc'),
+      technologies: ["Java", "Spring MVC", "MySQL", "Agile", "Scrum"],
+      icon: Database,
+      github: "https://github.com/hasangurel",
+    },
+    {
+      title: t('proj.campaign.title'),
+      description: t('proj.campaign.desc'),
+      technologies: ["Spring Boot", "JUnit", "Mockito", "Docker", "CI/CD"],
+      icon: Layers,
+      github: "https://github.com/hasangurel",
+    },
+  ];
+
   return (
     <section id="projects" className="py-20 bg-card">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Featured Projects
+            {t('projects.title')}
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-            A selection of backend projects showcasing my expertise in Java, Spring Boot, 
-            and microservices architecture.
+            {t('projects.subtitle')}
           </p>
         </div>
 
@@ -92,7 +90,7 @@ export const Projects = () => {
                       rel="noopener noreferrer"
                     >
                       <Github className="h-4 w-4 mr-2" />
-                      Code
+                      {t('projects.btn.code')}
                     </a>
                   </Button>
                   <Button variant="ghost" size="sm" asChild>
@@ -102,7 +100,7 @@ export const Projects = () => {
                       rel="noopener noreferrer"
                     >
                       <ExternalLink className="h-4 w-4 mr-2" />
-                      Demo
+                      {t('projects.btn.demo')}
                     </a>
                   </Button>
                 </div>

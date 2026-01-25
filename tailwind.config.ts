@@ -97,7 +97,8 @@ export default {
 			fontFamily: {
 				sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'sans-serif'],
 				mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'monospace'],
-				heading: ['Space Grotesk', 'Inter', 'system-ui', 'sans-serif']
+				heading: ['Space Grotesk', 'Inter', 'system-ui', 'sans-serif'],
+				workflow: ['Work Sans', 'Inter', 'system-ui', 'sans-serif']
 			}
 		}
 	},

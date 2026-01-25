@@ -5,33 +5,7 @@ import { Card, CardContent } from "./ui/card";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-
-const contactInfo = [
-  {
-    icon: Mail,
-    label: "Email",
-    value: "hasangurel9@hotmail.com",
-    href: "mailto:hasangurel9@hotmail.com",
-  },
-  {
-    icon: Phone,
-    label: "Phone",
-    value: "+90 531 990 1270",
-    href: "tel:+905319901270",
-  },
-  {
-    icon: MapPin,
-    label: "Location",
-    value: "Ankara, Turkey",
-    href: null,
-  },
-  {
-    icon: Globe,
-    label: "Website",
-    value: "hasangurel.com",
-    href: "https://hasangurel.com",
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const socialLinks = [
   {
@@ -47,6 +21,7 @@ const socialLinks = [
 ];
 
 export const Contact = () => {
+  const { t } = useLanguage();
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
@@ -55,18 +30,45 @@ export const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  const contactInfo = [
+    {
+      icon: Mail,
+      label: t('contact.info.email'),
+      value: "hasangurel9@hotmail.com",
+      href: "mailto:hasangurel9@hotmail.com",
+    },
+    {
+      icon: Phone,
+      label: t('contact.info.phone'),
+      value: "+90 531 990 1270",
+      href: "tel:+905319901270",
+    },
+    {
+      icon: MapPin,
+      label: t('contact.info.location'),
+      value: "Ankara, Turkey",
+      href: null,
+    },
+    {
+      icon: Globe,
+      label: "Website",
+      value: "hasangurel.com",
+      href: "https://hasangurel.com",
+    },
+  ];
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 1000));
-    
+
     toast({
       title: "Message sent!",
       description: "Thank you for reaching out. I'll get back to you soon.",
     });
-    
+
     setFormData({ name: "", email: "", message: "" });
     setIsSubmitting(false);
   };
@@ -76,12 +78,11 @@ export const Contact = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Get In Touch
+            {t('contact.title')}
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
           <p className="text-muted-foreground mt-4 max-w-xl mx-auto">
-            Interested in working together? Feel free to reach out for collaborations 
-            or just a friendly chat about backend development.
+            {t('contact.subtitle')}
           </p>
         </div>
 
@@ -95,7 +96,7 @@ export const Contact = () => {
                     htmlFor="name"
                     className="block text-sm font-medium text-foreground mb-1.5"
                   >
-                    Name
+                    {t('contact.form.name')}
                   </label>
                   <Input
                     id="name"
@@ -114,7 +115,7 @@ export const Contact = () => {
                     htmlFor="email"
                     className="block text-sm font-medium text-foreground mb-1.5"
                   >
-                    Email
+                    {t('contact.form.email')}
                   </label>
                   <Input
                     id="email"
@@ -133,7 +134,7 @@ export const Contact = () => {
                     htmlFor="message"
                     className="block text-sm font-medium text-foreground mb-1.5"
                   >
-                    Message
+                    {t('contact.form.message')}
                   </label>
                   <Textarea
                     id="message"
@@ -153,7 +154,7 @@ export const Contact = () => {
                   ) : (
                     <>
                       <Send className="h-4 w-4 mr-2" />
-                      Send Message
+                      {t('contact.form.send')}
                     </>
                   )}
                 </Button>

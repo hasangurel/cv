@@ -114,7 +114,161 @@ const translations: Record<Language, Record<string, string>> = {
         'howiwork.philosophy.title': 'My Development Philosophy',
         'howiwork.philosophy.description': 'I believe in writing code that not only works but is also clean, tested, and maintainable. Every line of code is an investment in the future. I prioritize quality over speed, but never compromise on delivery. Continuous learning and improvement are at the core of my development process.',
 
+        // Hero Section
+        'hero.available': 'Available for opportunities',
+        'hero.title': 'Java Backend Developer',
+        'hero.description': 'Specialized in microservices architecture, RESTful API development, and enterprise application design with 2+ years of hands-on experience.',
+        'hero.contact': 'Contact Me',
+        'hero.download_cv': 'Download CV',
+        'hero.exp_badge': '2+ Years\nExp.',
+
+        // About - API Cards
+        'about.card.who.title': 'Personal Info',
+        'about.card.who.summary': 'Java Backend Developer based in Ankara, Turkey with 2+ years of experience.',
+        'about.card.skills.title': 'Technical Stack',
+        'about.card.skills.summary': 'Specialized in microservices, REST APIs, and Spring ecosystem.',
+        'about.card.goals.title': 'Motivation & Goals',
+        'about.card.goals.summary': 'Passionate about scalable systems and cloud technologies.',
+        'about.hint.hover': 'Hover to view response',
+        'about.hint.viewing': 'Viewing response...',
+
+        // About - JSON Content (Values that should be translated)
+        'about.json.title': 'Java Backend Dev',
+        'about.json.location': 'Ankara, Turkey',
+        'about.json.role': 'Backend Dev',
+        'about.json.passion': 'Scalable Systems',
+        'about.json.goal': 'Solutions Architect',
+        'about.json.focus': 'Cloud & Distributed',
+        'about.json.status': 'Open to work',
+
+        // What I Do - Dashboard Header
+        'whatido.last_updated': 'Last updated:',
+        'whatido.just_now': 'Just now',
+        'whatido.status': 'ALL SYSTEMS OPERATIONAL',
+        'whatido.tracking': 'Tracking',
+        'whatido.areas': 'expertise areas',
+
+        // How I Work
+        'howiwork.hint': 'Hover to flip',
+
+        // Contact Section
+        'contact.title': 'Get In Touch',
+        'contact.subtitle': 'Interested in working together? Feel free to reach out for collaborations or just a friendly chat about backend development.',
+        'contact.form.name': 'Name',
+        'contact.form.email': 'Email',
+        'contact.form.message': 'Message',
+        'contact.form.send': 'Send Message',
+        'contact.info.email': 'Email',
+        'contact.info.phone': 'Phone',
+        'contact.info.location': 'Location',
+
+        // Footer
+        'footer.rights': 'All rights reserved.',
+        'footer.built': 'Built with React & Tailwind CSS',
+
+        // New Sections
+        'about.title': 'About Me',
+
+        // Education
+        'education.title': 'Education & Certifications',
+        'education.school.title': 'Computer Engineering',
+        'education.school.degree': "Bachelor's Degree",
+        'education.school.name': 'Eskişehir Technical University',
+        'education.school.period': '2019 – 2024',
+        'education.school.gpa': 'GPA: 3.12 / 4.00',
+        'education.school.lang': 'English & Turkish',
+        'education.school.degree_full': 'B.Sc. Computer Engineering',
+        'education.cert.title': 'Certifications',
+
+        'education.school.desc': 'Specialized in software engineering, algorithms, and backend development.',
+        'education.cert.credential': 'Credential ID',
+
+        // Certifications
+        'cert.java.title': 'IBM Java Developer Professional',
+        'cert.java.issuer': 'IBM',
+        'cert.java.desc': 'Comprehensive mastery of Java SE, Java EE, microservices, and cloud-native development.',
+
+        'cert.cloud.title': 'Cloud Native, Microservices, Containers, DevOps and Agile',
+        'cert.cloud.issuer': 'IBM',
+        'cert.cloud.desc': 'Deep dive into CI/CD, Docker, Kubernetes, OpenShift, and Agile methodologies.',
+
+        'cert.frontend.title': 'IBM Front-End Developer',
+        'cert.frontend.issuer': 'IBM',
+        'cert.frontend.desc': 'Professional training in React, clean code, UI/UX principles, and modern web development.',
+
+        'cert.math.title': 'Mathematics for Engineering',
+        'cert.math.issuer': 'Coursera',
+        'cert.math.desc': 'Applied mathematics focusing on matrix algebra, differential equations, and numerical analysis.',
+
+        'cert.finance.title': 'Derivatives - Options & Futures',
+        'cert.finance.issuer': 'Interactive Brokers',
+        'cert.finance.desc': 'Advanced financial markets training focusing on derivatives, options strategies, and futures trading.',
+
+        // Experience
+        'experience.title': 'Work Experience',
+        'experience.subtitle': '2+ years of professional experience in backend development and full-stack engineering',
+        'experience.duration.years': 'years',
+        'experience.duration.months': 'months',
+        'experience.type.fulltime': 'Full-time',
+        'experience.type.internship': 'Internship',
+
+        // Workeb
+        'exp.workeb.title': 'FullStack Developer',
+        'exp.workeb.location': 'Remote',
+        'exp.workeb.date': 'Oct 2024 – Dec 2025',
+        'exp.workeb.duration': '1 year 3 months',
+        'exp.workeb.desc.1': 'Designed microservice-based REST APIs using Spring Boot including user authorization, product management, and campaign features',
+        'exp.workeb.desc.2': 'Applied Design Patterns (Singleton, Factory, Builder) and SOLID principles for clean, maintainable code',
+        'exp.workeb.desc.3': 'Developed automated unit and integration tests using JUnit and Mockito',
+        'exp.workeb.desc.4': 'Worked with CI/CD pipelines using Git, Docker, and Linux',
+
+        // Vogue Telecom
+        'exp.vogue.title': 'FullStack Developer Intern',
+        'exp.vogue.location': 'Dubai, UAE',
+        'exp.vogue.date': 'Jul 2023 – Aug 2023',
+        'exp.vogue.duration': '2 months',
+        'exp.vogue.desc.1': 'Developed enterprise HRMS application using Spring Boot with JWT, LDAP, and OAuth2 authentication mechanisms',
+        'exp.vogue.desc.2': 'Integrated MongoDB database and ElasticSearch for efficient data management and search functionality',
+
+        // FMSS
+        'exp.fmss.title': 'Backend Developer Intern',
+        'exp.fmss.location': 'Remote',
+        'exp.fmss.date': 'Mar 2023 – Apr 2023',
+        'exp.fmss.duration': '2 months',
+        'exp.fmss.desc.1': 'Contributed to backend development processes in a Fintech project using Java and Spring Boot',
+        'exp.fmss.desc.2': 'Gained hands-on experience in enterprise-level backend architecture',
+
+        // Konya Science Center
+        'exp.konya.title': 'Backend Developer Intern',
+        'exp.konya.location': 'Konya, Turkey',
+        'exp.konya.date': 'Aug 2021 – Sep 2023',
+        'exp.konya.duration': '2 years 2 months',
+        'exp.konya.desc.1': 'Led a 5-person Agile team developing a library management system',
+        'exp.konya.desc.2': 'Managed sprint processes, ensured team coordination, and actively participated in development',
+
+        // Projects
+        'projects.title': 'Featured Projects',
+        'projects.subtitle': 'A selection of backend projects showcasing my expertise in Java, Spring Boot, and microservices architecture.',
+        'projects.btn.code': 'Code',
+        'projects.btn.demo': 'Demo',
+
+        // Project 1
+        'proj.ecommerce.title': 'E-Commerce Microservices Platform',
+        'proj.ecommerce.desc': 'A scalable e-commerce backend built with microservices architecture. Features include user authentication, product catalog, order management, and payment processing.',
+
+        // Project 2
+        'proj.hrms.title': 'Enterprise HRMS System',
+        'proj.hrms.desc': 'Human Resource Management System with JWT, LDAP, and OAuth2 authentication. Integrated MongoDB and ElasticSearch for efficient data management.',
+
+        // Project 3
+        'proj.library.title': 'Library Management System',
+        'proj.library.desc': 'Full-featured library management system developed using Agile methodology. Led a 5-person team managing sprint processes and development cycles.',
+
+        // Project 4
+        'proj.campaign.title': 'Campaign Management API',
+        'proj.campaign.desc': 'RESTful API for managing marketing campaigns with user authorization and product management features. Built following SOLID principles and design patterns.',
     },
+
     tr: {
         // Navigation
         'nav.about': 'Hakkımda',
@@ -125,6 +279,161 @@ const translations: Record<Language, Record<string, string>> = {
         'nav.projects': 'Projeler',
         'nav.instagram': 'Instagram',
         'nav.contact': 'İletişim',
+
+        // Hero Section
+        'hero.available': 'Yeni fırsatlara açık',
+        'hero.title': 'Java Backend Geliştirici',
+        'hero.description': 'Mikroservis mimarisi, RESTful API geliştirme ve kurumsal uygulama tasarımı konularında 2+ yıl deneyime sahip yazılım geliştirici.',
+        'hero.contact': 'İletişime Geç',
+        'hero.download_cv': 'CV İndir',
+        'hero.exp_badge': '2+ Yıl\nTecrübe',
+
+        // About - API Cards
+        'about.card.who.title': 'Kişisel Bilgiler',
+        'about.card.who.summary': 'Ankara merkezli, 2+ yıl deneyimli Java Backend Geliştirici.',
+        'about.card.skills.title': 'Teknik Yetkinlikler',
+        'about.card.skills.summary': 'Mikroservisler, REST API\'ler ve Spring ekosisteminde uzman.',
+        'about.card.goals.title': 'Motivasyon & Hedefler',
+        'about.card.goals.summary': 'Ölçeklenebilir sistemler ve bulut teknolojileri konusunda tutkulu.',
+        'about.hint.hover': 'Yanıtı görmek için üzerine gel',
+        'about.hint.viewing': 'Yanıt görüntüleniyor...',
+
+        // About - JSON Content
+        'about.json.title': 'Java Backend Geliştirici',
+        'about.json.location': 'Ankara, Türkiye',
+        'about.json.role': 'Backend Geliştirici',
+        'about.json.passion': 'Ölçeklenebilir Sistemler',
+        'about.json.goal': 'Çözüm Mimarı',
+        'about.json.focus': 'Bulut & Dağıtık Sistemler',
+        'about.json.status': 'İş arıyor',
+
+        // What I Do - Dashboard Header
+        'whatido.last_updated': 'Son güncelleme:',
+        'whatido.just_now': 'Şimdi',
+        'whatido.status': 'TÜM SİSTEMLER AKTİF',
+        'whatido.tracking': 'İzlenen',
+        'whatido.areas': 'uzmanlık alanı',
+
+        // How I Work
+        'howiwork.hint': 'Çevirmek için üzerine gel',
+
+        'education.school.desc': 'Yazılım mühendisliği, algoritmalar ve backend geliştirme üzerine uzmanlaşma.',
+        'education.cert.credential': 'Kimlik No',
+
+        // Certifications
+        'cert.java.title': 'IBM Java Developer Professional',
+        'cert.java.issuer': 'IBM',
+        'cert.java.desc': 'Java SE, Java EE, mikroservisler ve bulut tabanlı geliştirme konularında kapsamlı uzmanlık.',
+
+        'cert.cloud.title': 'Cloud Native, Microservices, Containers, DevOps and Agile',
+        'cert.cloud.issuer': 'IBM',
+        'cert.cloud.desc': 'CI/CD, Docker, Kubernetes, OpenShift ve Agile metodolojilerine derinlemesine bakış.',
+
+        'cert.frontend.title': 'IBM Front-End Developer',
+        'cert.frontend.issuer': 'IBM',
+        'cert.frontend.desc': 'React, temiz kod, UI/UX prensipleri ve modern web geliştirme üzerine profesyonel eğitim.',
+
+        'cert.math.title': 'Mathematics for Engineering',
+        'cert.math.issuer': 'Coursera',
+        'cert.math.desc': 'Matris cebiri, diferansiyel denklemler ve sayısal analiz odaklı uygulamalı matematik.',
+
+        'cert.finance.title': 'Derivatives - Options & Futures',
+        'cert.finance.issuer': 'Interactive Brokers',
+        'cert.finance.desc': 'Türev ürünler, opsiyon stratejileri ve vadeli işlemler üzerine ileri düzey finansal piyasalar eğitimi.',
+
+        // Contact Section
+        'contact.title': 'İletişime Geç',
+        'contact.subtitle': 'Birlikte çalışmak ister misiniz? İşbirlikleri veya sadece backend geliştirmeyle ilgili sohbet etmek için iletişime geçin.',
+        'contact.form.name': 'İsim',
+        'contact.form.email': 'E-posta',
+        'contact.form.message': 'Mesaj',
+        'contact.form.send': 'Mesaj Gönder',
+        'contact.info.email': 'E-posta',
+        'contact.info.phone': 'Telefon',
+        'contact.info.location': 'Konum',
+
+        // Footer
+        'footer.rights': 'Tüm hakları saklıdır.',
+        'footer.built': 'React & Tailwind CSS ile geliştirildi',
+
+        // New Sections
+        'about.title': 'Hakkımda',
+
+        // Education
+        'education.title': 'Eğitim ve Sertifikalar',
+        'education.school.title': 'Bilgisayar Mühendisliği',
+        'education.school.degree': "Lisans Derecesi",
+        'education.school.name': 'Eskişehir Teknik Üniversitesi',
+        'education.school.period': '2019 – 2024',
+        'education.school.gpa': 'Ortalama: 3.12 / 4.00',
+        'education.school.lang': 'İngilizce ve Türkçe',
+        'education.school.degree_full': 'Bilgisayar Mühendisliği (Lisans)',
+        'education.cert.title': 'Sertifikalar',
+
+        // Experience
+        'experience.title': 'İş Deneyimi',
+        'experience.subtitle': 'Backend geliştirme ve full-stack mühendislik alanında 2+ yıl profesyonel deneyim',
+        'experience.duration.years': 'yıl',
+        'experience.duration.months': 'ay',
+        'experience.type.fulltime': 'Tam Zamanlı',
+        'experience.type.internship': 'Stajyer',
+
+        // Workeb
+        'exp.workeb.title': 'FullStack Geliştirici',
+        'exp.workeb.location': 'Uzaktan',
+        'exp.workeb.date': 'Ekim 2024 – Ara 2025',
+        'exp.workeb.duration': '1 yıl 3 ay',
+        'exp.workeb.desc.1': 'Kullanıcı yetkilendirme, ürün yönetimi ve kampanya özelliklerini içeren Spring Boot tabanlı mikroservis REST API\'leri tasarladım',
+        'exp.workeb.desc.2': 'Temiz ve bakımı kolay kod için Tasarım Desenleri (Singleton, Factory, Builder) ve SOLID prensiplerini uyguladım',
+        'exp.workeb.desc.3': 'JUnit ve Mockito kullanarak otomatik birim ve entegrasyon testleri geliştirdim',
+        'exp.workeb.desc.4': 'Git, Docker ve Linux kullanarak CI/CD süreçlerinde çalıştım',
+
+        // Vogue Telecom
+        'exp.vogue.title': 'FullStack Geliştirici Stajyeri',
+        'exp.vogue.location': 'Dubai, BAE',
+        'exp.vogue.date': 'Tem 2023 – Ağu 2023',
+        'exp.vogue.duration': '2 ay',
+        'exp.vogue.desc.1': 'JWT, LDAP ve OAuth2 kimlik doğrulama mekanizmaları ile Spring Boot kullanarak kurumsal İK Yönetim Sistemi geliştirdim',
+        'exp.vogue.desc.2': 'Verimli veri yönetimi ve arama işlevselliği için MongoDB ve ElasticSearch entegrasyonu sağladım',
+
+        // FMSS
+        'exp.fmss.title': 'Backend Geliştirici Stajyeri',
+        'exp.fmss.location': 'Uzaktan',
+        'exp.fmss.date': 'Mar 2023 – Nis 2023',
+        'exp.fmss.duration': '2 ay',
+        'exp.fmss.desc.1': 'Java ve Spring Boot kullanarak bir Fintech projesinde backend geliştirme süreçlerine katkıda bulundum',
+        'exp.fmss.desc.2': 'Kurumsal seviyede backend mimarisi konusunda pratik deneyim kazandım',
+
+        // Konya Science Center
+        'exp.konya.title': 'Backend Geliştirici Stajyeri',
+        'exp.konya.location': 'Konya, Türkiye',
+        'exp.konya.date': 'Ağu 2021 – Eyl 2023',
+        'exp.konya.duration': '2 yıl 2 ay',
+        'exp.konya.desc.1': 'Kütüphane yönetim sistemi geliştiren 5 kişilik Agile ekibine liderlik ettim',
+        'exp.konya.desc.2': 'Sprint süreçlerini yönettim, ekip koordinasyonunu sağladım ve geliştirmeye aktif olarak katıldım',
+
+        // Projects
+        'projects.title': 'Öne Çıkan Projeler',
+        'projects.subtitle': 'Java, Spring Boot ve mikroservis mimarisindeki uzmanlığımı sergileyen seçilmiş backend projeleri.',
+        'projects.btn.code': 'Kod',
+        'projects.btn.demo': 'Demo',
+
+        // Project 1
+        'proj.ecommerce.title': 'E-Ticaret Mikroservis Platformu',
+        'proj.ecommerce.desc': 'Mikroservis mimarisi ile oluşturulmuş ölçeklenebilir e-ticaret backend\'i. Kullanıcı kimlik doğrulama, ürün kataloğu, sipariş yönetimi ve ödeme işleme özelliklerini içerir.',
+
+        // Project 2
+        'proj.hrms.title': 'Kurumsal İK Yönetim Sistemi',
+        'proj.hrms.desc': 'JWT, LDAP ve OAuth2 kimlik doğrulama özellikli İnsan Kaynakları Yönetim Sistemi. Verimli veri yönetimi için MongoDB ve ElasticSearch entegre edildi.',
+
+        // Project 3
+        'proj.library.title': 'Kütüphane Yönetim Sistemi',
+        'proj.library.desc': 'Agile metodolojisi kullanılarak geliştirilmiş tam kapsamlı kütüphane yönetim sistemi. Sprint süreçlerini ve geliştirme döngülerini yöneten 5 kişilik ekibe liderlik ettim.',
+
+        // Project 4
+        'proj.campaign.title': 'Kampanya Yönetim API',
+        'proj.campaign.desc': 'Kullanıcı yetkilendirme ve ürün yönetimi özelliklerine sahip pazarlama kampanyalarını yönetmek için RESTful API. SOLID prensipleri ve tasarım desenlerine uygun olarak geliştirildi.',
+
 
         // Instagram Section
         'instagram.title': 'Eğitim İçerikleri',

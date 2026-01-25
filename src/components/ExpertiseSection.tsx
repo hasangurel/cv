@@ -224,13 +224,36 @@ export const ExpertiseSection = () => {
                     {/* Monitoring Dashboard Section */}
                     <div id="whatido" className="mb-20">
                         <div className="text-center mb-12">
-                            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-heading tracking-tight">
-                                {t('whatido.title')}
-                            </h2>
-                            <div className="w-20 h-1 bg-primary mx-auto rounded-full mb-4" />
-                            <p className="text-muted-foreground text-lg font-sans">
-                                Monitoring My Backend Expertise
-                            </p>
+                            {/* Grafana-style Dashboard Header */}
+                            <div className="max-w-2xl mx-auto bg-card/80 backdrop-blur-sm rounded-xl border border-border/50 p-6 shadow-lg mb-6">
+                                {/* Top bar */}
+                                <div className="flex items-center justify-between mb-4 pb-4 border-b border-border/50">
+                                    <div className="flex items-center gap-2">
+                                        <span className="text-xl">📊</span>
+                                        <h2 className="text-2xl md:text-3xl font-bold text-foreground font-workflow tracking-tight">
+                                            {t('whatido.title')}
+                                        </h2>
+                                    </div>
+                                    <div className="flex items-center gap-2 text-xs text-muted-foreground font-mono">
+                                        <span>{t('whatido.last_updated')}</span>
+                                        <span className="text-foreground">{t('whatido.just_now')}</span>
+                                    </div>
+                                </div>
+
+                                {/* Status bar */}
+                                <div className="flex flex-wrap items-center justify-center gap-4">
+                                    <div className="flex items-center gap-2">
+                                        <div className="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse" />
+                                        <span className="text-sm font-mono text-green-600 dark:text-green-400">{t('whatido.status')}</span>
+                                    </div>
+                                    <div className="h-4 w-px bg-border hidden sm:block" />
+                                    <div className="flex items-center gap-2 text-sm text-muted-foreground font-mono">
+                                        <span>{t('whatido.tracking')}</span>
+                                        <span className="text-primary font-bold">6</span>
+                                        <span>{t('whatido.areas')}</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         {/* Monitoring Panels Grid - Equal Height Cards */}

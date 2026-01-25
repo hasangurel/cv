@@ -1,75 +1,78 @@
 import { Briefcase, Calendar, MapPin, ChevronRight } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
 import { Badge } from "./ui/badge";
-
-const experiences = [
-  {
-    title: "FullStack Developer",
-    company: "Workeb",
-    location: "Remote",
-    period: "Oct 2024 – Dec 2025",
-    duration: "1 year 3 months",
-    description: [
-      "Designed microservice-based REST APIs using Spring Boot including user authorization, product management, and campaign features",
-      "Applied Design Patterns (Singleton, Factory, Builder) and SOLID principles for clean, maintainable code",
-      "Developed automated unit and integration tests using JUnit and Mockito",
-      "Worked with CI/CD pipelines using Git, Docker, and Linux",
-    ],
-    technologies: ["Spring Boot", "Next.js", "Microservices", "Docker", "JUnit", "Git"],
-    type: "Full-time",
-  },
-  {
-    title: "FullStack Developer Intern",
-    company: "Vogue Telecom",
-    location: "Dubai, UAE",
-    period: "Jul 2023 – Aug 2023",
-    duration: "2 months",
-    description: [
-      "Developed enterprise HRMS application using Spring Boot with JWT, LDAP, and OAuth2 authentication mechanisms",
-      "Integrated MongoDB database and ElasticSearch for efficient data management and search functionality",
-    ],
-    technologies: ["Spring Boot", "MongoDB", "ElasticSearch", "JWT", "OAuth2", "LDAP"],
-    type: "Internship",
-  },
-  {
-    title: "Backend Developer Intern",
-    company: "FMSS",
-    location: "Remote",
-    period: "Mar 2023 – Apr 2023",
-    duration: "2 months",
-    description: [
-      "Contributed to backend development processes in a Fintech project using Java and Spring Boot",
-      "Gained hands-on experience in enterprise-level backend architecture",
-    ],
-    technologies: ["Java", "Spring Boot", "Fintech"],
-    type: "Internship",
-  },
-  {
-    title: "Backend Developer Intern",
-    company: "Konya Science Center",
-    location: "Konya, Turkey",
-    period: "Aug 2021 – Sep 2023",
-    duration: "2 years 2 months",
-    description: [
-      "Led a 5-person Agile team developing a library management system",
-      "Managed sprint processes, ensured team coordination, and actively participated in development",
-    ],
-    technologies: ["Java", "Agile", "Team Leadership"],
-    type: "Internship",
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const Experience = () => {
+  const { t } = useLanguage();
+
+  const experiences = [
+    {
+      title: t('exp.workeb.title'),
+      company: "Workeb",
+      location: t('exp.workeb.location'),
+      period: t('exp.workeb.date'),
+      duration: t('exp.workeb.duration'),
+      description: [
+        t('exp.workeb.desc.1'),
+        t('exp.workeb.desc.2'),
+        t('exp.workeb.desc.3'),
+        t('exp.workeb.desc.4'),
+      ],
+      technologies: ["Spring Boot", "Next.js", "Microservices", "Docker", "JUnit", "Git"],
+      type: t('experience.type.fulltime'),
+    },
+    {
+      title: t('exp.vogue.title'),
+      company: "Vogue Telecom",
+      location: t('exp.vogue.location'),
+      period: t('exp.vogue.date'),
+      duration: t('exp.vogue.duration'),
+      description: [
+        t('exp.vogue.desc.1'),
+        t('exp.vogue.desc.2'),
+      ],
+      technologies: ["Spring Boot", "MongoDB", "ElasticSearch", "JWT", "OAuth2", "LDAP"],
+      type: t('experience.type.internship'),
+    },
+    {
+      title: t('exp.fmss.title'),
+      company: "FMSS",
+      location: t('exp.fmss.location'),
+      period: t('exp.fmss.date'),
+      duration: t('exp.fmss.duration'),
+      description: [
+        t('exp.fmss.desc.1'),
+        t('exp.fmss.desc.2'),
+      ],
+      technologies: ["Java", "Spring Boot", "Fintech"],
+      type: t('experience.type.internship'),
+    },
+    {
+      title: t('exp.konya.title'),
+      company: "Konya Science Center",
+      location: t('exp.konya.location'),
+      period: t('exp.konya.date'),
+      duration: t('exp.konya.duration'),
+      description: [
+        t('exp.konya.desc.1'),
+        t('exp.konya.desc.2'),
+      ],
+      technologies: ["Java", "Agile", "Team Leadership"],
+      type: t('experience.type.internship'),
+    },
+  ];
+
   return (
     <section id="experience" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Work Experience
+            {t('experience.title')}
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-            2+ years of professional experience in backend development and full-stack engineering
+            {t('experience.subtitle')}
           </p>
         </div>
 
@@ -154,11 +157,11 @@ export const Experience = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="text-center p-4 rounded-lg bg-card border">
               <div className="text-2xl font-bold text-primary">2+</div>
-              <div className="text-sm text-muted-foreground">Years Experience</div>
+              <div className="text-sm text-muted-foreground">{t('experience.duration.years')}</div>
             </div>
             <div className="text-center p-4 rounded-lg bg-card border">
               <div className="text-2xl font-bold text-primary">4</div>
-              <div className="text-sm text-muted-foreground">Companies</div>
+              <div className="text-sm text-muted-foreground">{t('experience.title').split(' ')[1] || 'Companies'}</div>
             </div>
             <div className="text-center p-4 rounded-lg bg-card border">
               <div className="text-2xl font-bold text-primary">10+</div>
@@ -166,7 +169,7 @@ export const Experience = () => {
             </div>
             <div className="text-center p-4 rounded-lg bg-card border">
               <div className="text-2xl font-bold text-primary">3</div>
-              <div className="text-sm text-muted-foreground">Countries</div>
+              <div className="text-sm text-muted-foreground">{t('experience.location') || 'Countries'}</div>
             </div>
           </div>
         </div>

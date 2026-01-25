@@ -1,7 +1,10 @@
 import { Github, Linkedin, Mail, MapPin, Phone, Download } from "lucide-react";
 import { Button } from "./ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const Hero = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="hero" className="min-h-screen flex items-center pt-4 relative overflow-hidden">
       {/* Background Pattern */}
@@ -15,7 +18,7 @@ export const Hero = () => {
           <div className="space-y-6 animate-fade-up">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-accent text-accent-foreground rounded-full text-sm font-medium">
               <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-              Available for opportunities
+              {t('hero.available')}
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
@@ -23,12 +26,11 @@ export const Hero = () => {
             </h1>
 
             <p className="text-xl md:text-2xl text-primary font-semibold">
-              Java Backend Developer
+              {t('hero.title')}
             </p>
 
             <p className="text-lg text-muted-foreground max-w-xl">
-              Specialized in microservices architecture, RESTful API development,
-              and enterprise application design with 2+ years of hands-on experience.
+              {t('hero.description')}
             </p>
 
             <div className="flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
@@ -46,7 +48,7 @@ export const Hero = () => {
               <Button asChild>
                 <a href="mailto:hasangurel9@hotmail.com">
                   <Mail className="h-4 w-4 mr-2" />
-                  Contact Me
+                  {t('hero.contact')}
                 </a>
               </Button>
               <Button variant="outline" asChild>
@@ -63,7 +65,7 @@ export const Hero = () => {
               </Button>
               <Button variant="secondary" onClick={() => window.print()}>
                 <Download className="h-4 w-4 mr-2" />
-                Download CV
+                {t('hero.download_cv')}
               </Button>
             </div>
           </div>
@@ -78,8 +80,8 @@ export const Hero = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary rounded-2xl flex items-center justify-center text-primary-foreground font-mono text-sm">
-                2+ Years<br />Exp.
+              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary rounded-2xl flex items-center justify-center text-primary-foreground font-mono text-sm text-center whitespace-pre-line">
+                {t('hero.exp_badge')}
               </div>
             </div>
           </div>

@@ -2,100 +2,104 @@ import { Briefcase, Calendar, MapPin, GraduationCap, Award } from "lucide-react"
 import { Card, CardContent } from "./ui/card";
 import { Badge } from "./ui/badge";
 
-const experiences = [
-    {
-        title: "FullStack Developer",
-        company: "Workeb",
-        location: "Remote",
-        period: "Oct 2024 – Dec 2025",
-        description: [
-            "Designed microservice-based REST APIs using Spring Boot",
-            "Applied Design Patterns and SOLID principles",
-            "Developed automated tests using JUnit and Mockito",
-        ],
-        technologies: ["Spring Boot", "Next.js", "Microservices", "Docker"],
-    },
-    {
-        title: "FullStack Developer Intern",
-        company: "Vogue Telecom",
-        location: "Dubai, UAE",
-        period: "Jul 2023 – Aug 2023",
-        description: [
-            "Developed enterprise HRMS with JWT, LDAP, OAuth2",
-            "Integrated MongoDB and ElasticSearch",
-        ],
-        technologies: ["Spring Boot", "MongoDB", "ElasticSearch", "JWT"],
-    },
-    {
-        title: "Backend Developer Intern",
-        company: "FMSS",
-        location: "Remote",
-        period: "Mar 2023 – Apr 2023",
-        description: [
-            "Contributed to Fintech project",
-            "Gained enterprise-level backend experience",
-        ],
-        technologies: ["Java", "Spring Boot"],
-    },
-    {
-        title: "Backend Developer Intern",
-        company: "Konya Science Center",
-        location: "Konya, Turkey",
-        period: "Aug 2021 – Sep 2023",
-        description: [
-            "Led 5-person Agile team",
-            "Developed library management system",
-        ],
-        technologies: ["Java", "Agile"],
-    },
-];
-
-const education = [
-    {
-        degree: "B.Sc. Computer Engineering",
-        school: "Eskişehir Technical University",
-        period: "2019 – 2024",
-        gpa: "3.12 / 4.00",
-        description: "Specialized in software engineering, algorithms, and backend development.",
-    },
-    {
-        degree: "Derivatives - Options & Futures",
-        school: "Interactive Brokers",
-        period: "Nov 2025",
-        badge: "Credential ID: D7301D78PTZS",
-        description: "Advanced financial markets training focusing on derivatives, options strategies, and futures trading.",
-    },
-    {
-        degree: "IBM Java Developer Professional",
-        school: "IBM",
-        period: "2025",
-        badge: "Professional Certificate",
-        description: "Comprehensive mastery of Java SE, Java EE, microservices, and cloud-native development.",
-    },
-    {
-        degree: "Cloud Native, Microservices, Containers, DevOps and Agile",
-        school: "IBM",
-        period: "2025",
-        badge: "Specialization",
-        description: "Deep dive into CI/CD, Docker, Kubernetes, OpenShift, and Agile methodologies.",
-    },
-    {
-        degree: "IBM Front-End Developer",
-        school: "IBM",
-        period: "2025",
-        badge: "Specialization",
-        description: "Professional training in React, clean code, UI/UX principles, and modern web development.",
-    },
-    {
-        degree: "Mathematics for Engineering",
-        school: "Coursera",
-        period: "2025",
-        badge: "Specialization",
-        description: "Applied mathematics focusing on matrix algebra, differential equations, and numerical analysis.",
-    },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const TimelineSection = () => {
+    const { t } = useLanguage();
+
+    const experiences = [
+        {
+            title: t('exp.workeb.title'),
+            company: "Workeb",
+            location: t('exp.workeb.location'),
+            period: t('exp.workeb.date'),
+            description: [
+                t('exp.workeb.desc.1'),
+                t('exp.workeb.desc.2'),
+                t('exp.workeb.desc.3'),
+            ],
+            technologies: ["Spring Boot", "Next.js", "Microservices", "Docker"],
+        },
+        {
+            title: t('exp.vogue.title'),
+            company: "Vogue Telecom",
+            location: t('exp.vogue.location'),
+            period: t('exp.vogue.date'),
+            description: [
+                t('exp.vogue.desc.1'),
+                t('exp.vogue.desc.2'),
+            ],
+            technologies: ["Spring Boot", "MongoDB", "ElasticSearch", "JWT"],
+        },
+        {
+            title: t('exp.fmss.title'),
+            company: "FMSS",
+            location: t('exp.fmss.location'),
+            period: t('exp.fmss.date'),
+            description: [
+                t('exp.fmss.desc.1'),
+                t('exp.fmss.desc.2'),
+            ],
+            technologies: ["Java", "Spring Boot"],
+        },
+        {
+            title: t('exp.konya.title'),
+            company: "Konya Science Center",
+            location: t('exp.konya.location'),
+            period: t('exp.konya.date'),
+            description: [
+                t('exp.konya.desc.1'),
+                t('exp.konya.desc.2'),
+            ],
+            technologies: ["Java", "Agile"],
+        },
+    ];
+
+    const education = [
+        {
+            degree: t('education.school.degree_full'),
+            school: t('education.school.name'),
+            period: t('education.school.period'),
+            gpa: "3.12 / 4.00",
+            description: t('education.school.desc'),
+        },
+        {
+            degree: t('cert.finance.title'),
+            school: t('cert.finance.issuer'),
+            period: "Nov 2025",
+            badge: `${t('education.cert.credential')}: D7301D78PTZS`,
+            description: t('cert.finance.desc'),
+        },
+        {
+            degree: t('cert.java.title'),
+            school: t('cert.java.issuer'),
+            period: "2025",
+            badge: "Professional Certificate",
+            description: t('cert.java.desc'),
+        },
+        {
+            degree: t('cert.cloud.title'),
+            school: t('cert.cloud.issuer'),
+            period: "2025",
+            badge: "Specialization",
+            description: t('cert.cloud.desc'),
+        },
+        {
+            degree: t('cert.frontend.title'),
+            school: t('cert.frontend.issuer'),
+            period: "2025",
+            badge: "Specialization",
+            description: t('cert.frontend.desc'),
+        },
+        {
+            degree: t('cert.math.title'),
+            school: t('cert.math.issuer'),
+            period: "2025",
+            badge: "Specialization",
+            description: t('cert.math.desc'),
+        },
+    ];
+
     return (
         <section className="py-20 bg-background">
             <div className="container mx-auto px-4">
